@@ -1,0 +1,375 @@
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8e9e5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.content {
+    margin-right: 20px;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.content p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+
+.container img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.vertical-dots {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.vertical-dots .dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.about-container {
+    max-width: 1200px;
+    padding: 50px;
+    text-align: justify;
+}
+
+.about-container h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-container p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    max-width: 1200px;
+    padding: 50px;
+    margin: auto;
+}
+
+.projects-container h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.project-item img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content a {
+    text-decoration: none;
+    color: #333;
+}
+
+.project-content a:hover,
+.project-content a:focus,
+.project-content a:active {
+    color: #333;
+}
+
+.project-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.project-content h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.project-content p {
+    font-size: 16px;
+    color: #555;
+    margin: 0 0 10px;
+}
+
+.project-views {
+    font-size: 14px;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-like {
+    font-size: 18px;
+    color: #e74c3c;
+    cursor: pointer;
+}
+.skills-container {
+    max-width: 1000px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.skills-container h3 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.skills-container h3 {
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.technical-skills {
+    width: 40%; /* Adjust width as needed */
+}
+
+.soft-skills {
+    width: 60%; /* Adjust width as needed */
+}
+
+.technical-skills h3 {
+    font-size: 27px; /* Font size for technical skills heading */
+}
+
+.soft-skills h3 {
+    font-size: 27px; /* Font size for soft skills heading */
+}
+
+.technical-skills .skill {
+    font-size: 18px; /* Font size for technical skills */
+}
+
+.soft-skills .skill {
+    font-size: 22px; /* Font size for soft skills */
+}
+
+
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: black;
+    border-radius: 5px;
+    transition: width 2s ease-in-out;
+}
+.education-container h2 {
+    font-size: 45px;
+    text-align: center;
+}
+.education-timeline {
+    position: relative;
+    margin-left: 40px;
+    padding-left: 20px;
+    font-size: 5px;
+}
+
+
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    font-size: 20px;
+}
+
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+}
+.timeline-item.visible::before {
+    height: 100%;
+}
+
+
+.timeline-content {
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #f8e9e5;
+    border-radius: 5px;
+}
+
+.achievements-container {
+    max-width: 1000px;
+    margin: 20px 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.achievements-container h2 {
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+.achievements-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.achievement-item {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.achievement-item img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.achievement-content {
+    text-align: center;
+}
+
+.achievement-content h3 {
+    font-size: 20px;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.achievement-content p {
+    font-size: 18px;
+}
+
+/* Vertical Dots for navigation */
+.vertical-dots {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.contact-container h1{
+    font-size: 40px;
+   text-align: center;
+
+}
+.contact-container p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.social-media-icons a {
+    margin: 0 1em;
+}
+
+.social-media-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}
+
