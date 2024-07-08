@@ -57,11 +57,14 @@ script.js: JavaScript file for interactivity.
 images/: Folder containing all images used in the website.
 
 **Live Demo**
+
 You can view a live demo of the website here.
 
 **Contributing**
+
 Feel free to fork the repository and submit pull requests. Contributions to improve the website are welcome!
 
 **Contact**
+
 Connect with me on LinkedIn or check out my other projects on GitHub. You can also reach me via email at mrudulaa31@gmail.com.
 
