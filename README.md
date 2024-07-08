@@ -47,6 +47,7 @@ cd personal-portfolio
 Open index.html in your browser.
 
 **Folder Structure**
+
 index.html: Main HTML file.
 
 styles.css: CSS file for styling.
